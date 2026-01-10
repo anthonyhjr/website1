@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>HartWebDev - Web Developer & Designer | Portfolio</title>
+    <meta name="title" content="Your Name - Web Developer & Designer | Portfolio">
+    <meta name="description" content="Professional web developer and designer specializing in modern, responsive websites and web applications. View my portfolio of projects, skills, and client testimonials.">
+    <meta name="keywords" content="web developer, web designer, frontend developer, portfolio, HTML, CSS, JavaScript, React, Vue.js, Node.js, responsive design, UI/UX designer, freelance web developer">
+    <meta name="author" content="Your Name">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="theme-color" content="#6366f1">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourwebsite.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta property="og:title" content="Your Name - Web Developer & Designer | Portfolio">
+    <meta property="og:description" content="Professional web developer and designer specializing in modern, responsive websites and web applications. View my portfolio of projects, skills, and client testimonials.">
+    <meta property="og:image" content="https://yourwebsite.com/preview-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Your Name - Web Developer Portfolio">
+    <meta property="og:site_name" content="Your Name Portfolio">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://yourwebsite.com/">
+    <meta name="twitter:title" content="Your Name - Web Developer & Designer | Portfolio">
+    <meta name="twitter:description" content="Professional web developer and designer specializing in modern, responsive websites and web applications.">
+    <meta name="twitter:image" content="https://yourwebsite.com/preview-image.jpg">
+    <meta name="twitter:image:alt" content="Your Name - Web Developer Portfolio">
+    <meta name="twitter:creator" content="@yourusername">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="geo.region" content="US">
+    <meta name="geo.placename" content="Your City">
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Performance: Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    
+    <!-- Structured Data (Schema.org JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Your Name",
+        "url": "https://yourwebsite.com",
+        "image": "https://yourwebsite.com/profile-image.jpg",
+        "sameAs": [
+            "https://github.com/yourusername",
+            "https://linkedin.com/in/yourusername",
+            "https://twitter.com/yourusername"
+        ],
+        "jobTitle": "Web Developer & Designer",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Freelance"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Your City",
+            "addressCountry": "US"
+        },
+        "email": "your.email@example.com",
+        "knowsAbout": ["Web Development", "Frontend Development", "UI/UX Design", "JavaScript", "React", "HTML", "CSS"],
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Your University/School"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Your Name Portfolio",
+        "url": "https://yourwebsite.com",
+        "description": "Professional web developer and designer portfolio",
+        "author": {
+            "@type": "Person",
+            "name": "Your Name"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://yourwebsite.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Your Name Web Development Services",
+        "description": "Professional web development and design services",
+        "url": "https://yourwebsite.com",
+        "telephone": "+1-XXX-XXX-XXXX",
+        "email": "your.email@example.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Your City",
+            "addressRegion": "Your State",
+            "addressCountry": "US"
+        },
+        "priceRange": "$$",
+        "areaServed": "Worldwide",
+        "serviceType": ["Website Development", "Web Application Development", "Website Redesign", "E-Commerce Solutions", "SEO Optimization"]
+    }
+    </script>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">
+            <span class="loader-dots">Loading</span>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">HartWebDev</a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="skills.html" class="nav-link">Skills</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-right">
+                    <span class="availability-badge" id="availabilityBadge">
+                        <i class="fas fa-circle"></i> Available for Hire
+                    </span>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" itemscope itemtype="https://schema.org/Person">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title" itemprop="name">
+                    <span class="greeting">Hi, I'm </span>
+                    <span class="name typing-text" id="typingText"></span>
+                    <span class="typing-cursor"></span>
+                </h1>
+                <p class="hero-subtitle" itemprop="jobTitle">
+                    <span class="typing-subtitle" id="typingSubtitle"></span>
+                </p>
+                <p class="hero-description" itemprop="description">
+                    I create beautiful, responsive websites and web applications 
+                    that provide exceptional user experiences.
+                </p>
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn btn-primary">View My Work</a>
+                    <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+                    <a href="resume.pdf" class="btn btn-outline" download>
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com/yourusername" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="mailto:your.email@example.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="profile-circle">
+                <!-- Replace this div with an <img> tag if you have a profile photo -->
+                <!-- <img src="images/profile.jpg" alt="Your Name - Web Developer & Designer" loading="lazy" width="400" height="400"> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats Section -->
+    <section class="section quick-stats-section" style="padding-top: 60px; padding-bottom: 60px;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Experience</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">A snapshot of the results I've delivered so far</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="3">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="20">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">GitHub Contributions</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What People Say</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Testimonials from clients and colleagues</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Exceptional work! Delivered a stunning website that exceeded all our expectations. 
+                        Professional, creative, and always responsive to feedback."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <h4>John Doe</h4>
+                            <p>CEO, Tech Company</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Outstanding developer with incredible attention to detail. The website not only 
+                        looks amazing but performs flawlessly. Highly recommended!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SJ</div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Creative Director, Design Studio</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Working with [Your Name] was a pleasure. They transformed our vision into a 
+                        beautiful reality. The code quality is excellent and the design is stunning."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MW</div>
+                        <div class="author-info">
+                            <h4>Mike Williams</h4>
+                            <p>Founder, Startup Inc.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Services I Offer</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Comprehensive web solutions tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Website Development</h3>
+                    <p>Custom, responsive websites built with modern technologies. Fast, secure, and optimized for search engines.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Fully Responsive Design</li>
+                        <li><i class="fas fa-check"></i> SEO Optimized</li>
+                        <li><i class="fas fa-check"></i> Fast Loading Times</li>
+                        <li><i class="fas fa-check"></i> Mobile-First Approach</li>
+                    </ul>
+                    <div class="service-price">Starting at $1,500</div>
+                </div>
+                <div class="service-card featured-service">
+                    <div class="service-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Web Applications</h3>
+                    <p>Custom web applications with advanced functionality. From dashboards to e-commerce platforms.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Custom Functionality</li>
+                        <li><i class="fas fa-check"></i> User Authentication</li>
+                        <li><i class="fas fa-check"></i> Database Integration</li>
+                        <li><i class="fas fa-check"></i> API Development</li>
+                    </ul>
+                    <div class="service-price">Starting at $3,000</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Website Redesign</h3>
+                    <p>Transform your existing website with modern design and improved functionality. Boost conversions and user experience.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Modern Design</li>
+                        <li><i class="fas fa-check"></i> Improved UX/UI</li>
+                        <li><i class="fas fa-check"></i> Better Performance</li>
+                        <li><i class="fas fa-check"></i> Content Migration</li>
+                    </ul>
+                    <div class="service-price">Starting at $2,000</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-Commerce Solutions</h3>
+                    <p>Complete online stores with shopping cart, payment integration, and inventory management.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Shopping Cart System</li>
+                        <li><i class="fas fa-check"></i> Payment Gateway</li>
+                        <li><i class="fas fa-check"></i> Product Management</li>
+                        <li><i class="fas fa-check"></i> Order Tracking</li>
+                    </ul>
+                    <div class="service-price">Starting at $4,000</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Maintenance & Support</h3>
+                    <p>Ongoing website maintenance, updates, security monitoring, and technical support.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Regular Updates</li>
+                        <li><i class="fas fa-check"></i> Security Monitoring</li>
+                        <li><i class="fas fa-check"></i> Bug Fixes</li>
+                        <li><i class="fas fa-check"></i> Technical Support</li>
+                    </ul>
+                    <div class="service-price">From $100/month</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>SEO & Optimization</h3>
+                    <p>Improve your website's search engine rankings and performance with professional SEO services.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Keyword Research</li>
+                        <li><i class="fas fa-check"></i> On-Page SEO</li>
+                        <li><i class="fas fa-check"></i> Speed Optimization</li>
+                        <li><i class="fas fa-check"></i> Analytics Setup</li>
+                    </ul>
+                    <div class="service-price">From $500/month</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How I Work</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">A transparent process that ensures your project's success</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="process-number">01</div>
+                    <div class="process-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Discovery & Consultation</h3>
+                    <p>We discuss your goals, target audience, and requirements. I ask questions to understand your vision and create a detailed project brief.</p>
+                    <div class="process-duration">1-2 Days</div>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">02</div>
+                    <div class="process-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3>Design & Planning</h3>
+                    <p>I create wireframes and design mockups for your approval. We refine the design until it perfectly matches your vision.</p>
+                    <div class="process-duration">3-5 Days</div>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">03</div>
+                    <div class="process-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Development</h3>
+                    <p>I build your website/app using best practices, writing clean, maintainable code. You'll get regular updates on progress.</p>
+                    <div class="process-duration">2-4 Weeks</div>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">04</div>
+                    <div class="process-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h3>Testing & Refinement</h3>
+                    <p>Thorough testing across devices and browsers. I fix any issues and make final adjustments based on your feedback.</p>
+                    <div class="process-duration">3-5 Days</div>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">05</div>
+                    <div class="process-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Launch & Support</h3>
+                    <p>Your website goes live! I provide documentation, training, and ongoing support to ensure everything runs smoothly.</p>
+                    <div class="process-duration">Ongoing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Preview -->
+    <section class="section featured-projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">A glimpse of my recent work</p>
+            </div>
+            <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="projects.html" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> View Project
+                                </a>
+                                <a href="#" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Project Title 1</h3>
+                        <p class="project-description">
+                            A modern web application built with React and Node.js. 
+                            Features include user authentication, real-time updates, 
+                            and responsive design.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="projects.html" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> View Project
+                                </a>
+                                <a href="#" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Project Title 2</h3>
+                        <p class="project-description">
+                            An e-commerce platform with shopping cart functionality, 
+                            payment integration, and admin dashboard. Built with 
+                            modern web technologies.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Express</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="projects.html" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> View Project
+                                </a>
+                                <a href="#" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Project Title 3</h3>
+                        <p class="project-description">
+                            A responsive portfolio website with smooth animations, 
+                            dark mode support, and interactive elements. Fully 
+                            accessible and SEO optimized.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Particles.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta" style="text-align: center; margin-top: 3rem;">
+                <a href="projects.html" class="btn btn-primary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section class="section newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-icon">
+                    <i class="fas fa-envelope-open-text"></i>
+                </div>
+                <h2>Stay Updated</h2>
+                <p>Subscribe to my newsletter for web development tips, project updates, and exclusive insights.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="newsletter-input-wrapper">
+                        <input 
+                            type="email" 
+                            id="newsletterEmail" 
+                            name="email" 
+                            placeholder="Enter your email address" 
+                            required
+                            aria-label="Email address for newsletter"
+                        >
+                        <button type="submit" class="btn btn-primary">
+                            <span>Subscribe</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <p class="newsletter-privacy">
+                        <i class="fas fa-shield-alt"></i> We respect your privacy. Unsubscribe at any time.
+                    </p>
+                    <div class="newsletter-message" id="newsletterMessage"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="cta-section-main">
+        <div class="container">
+            <div class="cta-content-main">
+                <h2>Ready to Bring Your Vision to Life?</h2>
+                <p>Let's work together to create something amazing. I'm available for new projects and would love to hear about your ideas.</p>
+                <div class="cta-buttons-main">
+                    <a href="contact.html" class="btn btn-cta-primary">
+                        <i class="fas fa-paper-plane"></i> Start Your Project
+                    </a>
+                    <a href="projects.html" class="btn btn-cta-secondary">
+                        <i class="fas fa-eye"></i> View My Work
+                    </a>
+                </div>
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <i class="fas fa-clock"></i>
+                        <span>Quick Response Time</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-handshake"></i>
+                        <span>Free Consultation</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>100% Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; <span id="currentYear"></span> Your Name. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Skip to Content Link (Accessibility) -->
+    <a href="#home" class="skip-to-content">Skip to content</a>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <i class="fas fa-cookie-bite"></i>
+                <p>We use cookies to enhance your browsing experience and analyze site traffic. By continuing to use this site, you consent to our use of cookies.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button class="btn btn-primary" id="acceptCookies">Accept All</button>
+                <button class="btn btn-outline" id="declineCookies">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Sharing Buttons (Fixed) -->
+    <div class="social-share-buttons" id="socialShareButtons">
+        <button class="share-btn" data-platform="facebook" aria-label="Share on Facebook" title="Share on Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </button>
+        <button class="share-btn" data-platform="twitter" aria-label="Share on Twitter" title="Share on Twitter">
+            <i class="fab fa-twitter"></i>
+        </button>
+        <button class="share-btn" data-platform="linkedin" aria-label="Share on LinkedIn" title="Share on LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </button>
+        <button class="share-btn" data-platform="email" aria-label="Share via Email" title="Share via Email">
+            <i class="fas fa-envelope"></i>
+        </button>
+    </div>
+
+    <!-- Google Analytics (replace with your tracking ID) -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX'); // Replace with your Google Analytics tracking ID
+    </script>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

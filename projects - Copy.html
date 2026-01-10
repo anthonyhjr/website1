@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Your Name - Portfolio</title>
+    <meta name="description" content="Browse my portfolio of web development projects including websites, web applications, and e-commerce solutions. See examples of my work and client projects.">
+    <meta name="keywords" content="web development projects, portfolio projects, website examples, web applications, frontend projects, JavaScript projects">
+    <meta name="author" content="Your Name">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yourwebsite.com/projects.html">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">
+            <span class="loader-dots">Loading</span>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">HartWebDev</a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                    <li><a href="skills.html" class="nav-link">Skills</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-right">
+                    <span class="availability-badge" id="availabilityBadge">
+                        <i class="fas fa-circle"></i> Available for Hire
+                    </span>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" style="padding-top: 120px;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Websites I've Built</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Here are some recent websites I've built</p>
+            </div>
+            <div class="projects-grid modern-projects-grid">
+                <article class="project-card gradient-ink">
+                    <div class="project-media">
+                        <div class="project-icon">
+                            <i class="fas fa-feather-pointed" aria-hidden="true"></i>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://loquacious-heliotrope-4e3d17.netlify.app/" target="_blank" rel="noopener" class="project-btn btn-live">
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="project-btn btn-code is-disabled" aria-disabled="true">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Ink &amp; Soul</h3>
+                        <p class="project-description">
+                            A modern website for a tattoo studio built with React and Node.js.
+                            Features include user authentication, real-time updates, and responsive design.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card gradient-spice">
+                    <div class="project-media">
+                        <div class="project-icon">
+                            <i class="fas fa-utensils" aria-hidden="true"></i>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://darling-parfait-6813a7.netlify.app/" target="_blank" rel="noopener" class="project-btn btn-live">
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="project-btn btn-code is-disabled" aria-disabled="true">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Island Spice &amp; Basil</h3>
+                        <p class="project-description">
+                            A mobile-friendly restaurant experience with a full interactive menu and online ordering flow that can be tailored to any cuisine.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card gradient-estate">
+                    <div class="project-media">
+                        <div class="project-icon">
+                            <i class="fas fa-house-chimney" aria-hidden="true"></i>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://jazzy-peony-ce63ff.netlify.app/" target="_blank" rel="noopener" class="project-btn btn-live">
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                Live Demo
+                            </a>
+                            <a href="https://polite-capybara-ad38c9.netlify.app/" target="_blank" rel="noopener" class="project-btn btn-code">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Real Estate Website</h3>
+                        <p class="project-description">
+                            A polished real estate platform featuring property search, interactive filters, listing galleries, and immersive 3D tour demos.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card gradient-commerce">
+                    <div class="project-media">
+                        <div class="project-icon">
+                            <i class="fas fa-cart-shopping" aria-hidden="true"></i>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://jazzy-rabanadas-0dcd58.netlify.app/" target="_blank" rel="noopener" class="project-btn btn-live">
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="project-btn btn-code is-disabled" aria-disabled="true">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-Commerce Website</h3>
+                        <p class="project-description">
+                            An e-commerce experience with cart management, payment integrations, and an admin-ready dashboard built for scalability.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="section-header" style="margin-top: 4rem;">
+                <h2 class="section-title">Games I've Built</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Interactive experiences crafted for fun and learning</p>
+            </div>
+
+            <div class="projects-grid games-grid modern-projects-grid">
+                <article class="project-card gradient-match">
+                    <div class="project-media">
+                        <div class="project-icon">
+                            <i class="fas fa-gamepad" aria-hidden="true"></i>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://polite-capybara-ad38c9.netlify.app/" target="_blank" rel="noopener" class="project-btn btn-live">
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="project-btn btn-code is-disabled" aria-disabled="true">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Match 3 Demo</h3>
+                        <p class="project-description">
+                            A relaxing match-3 prototype built with HTML, CSS, and JavaScript that showcases future plans for power-ups and level progression.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card gradient-brick">
+                    <div class="project-media">
+                        <div class="project-icon">
+                            <i class="fas fa-shuttle-space" aria-hidden="true"></i>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="project-btn btn-live is-disabled" aria-disabled="true">
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="project-btn btn-code is-disabled" aria-disabled="true">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Brick Breaker Demo</h3>
+                        <p class="project-description">
+                            A retro-inspired brick breaker concept featuring multiple power-ups and 100 planned levels, engineered with performant vanilla web technologies.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; <span id="currentYear"></span> Your Name. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Skip to Content Link (Accessibility) -->
+    <a href="#projects" class="skip-to-content">Skip to content</a>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

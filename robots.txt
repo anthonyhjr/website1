@@ -1,0 +1,29 @@
+# robots.txt for Your Portfolio Website
+
+# Allow all search engines to crawl the entire site
+User-agent: *
+Allow: /
+
+# Disallow admin or private areas (if you have any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://yourwebsite.com/sitemap.xml
+
+# Crawl-delay (optional - adjust as needed)
+# Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Block bad bots (optional)
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /

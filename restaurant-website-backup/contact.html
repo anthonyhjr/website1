@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Island Spice & Basil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">Island Spice & Basil</a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="order.html">Order Online</a></li>
+                    <li><a href="press.html">Press</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <h1 class="page-title">Contact Us</h1>
+            <p class="page-subtitle">We'd Love to Hear From You</p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info Cards -->
+                <div class="contact-info-section">
+                    <h2 class="section-title">Get in Touch</h2>
+                    <div class="title-underline"></div>
+                    
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon">📍</div>
+                            <h3>Location</h3>
+                            <p><strong>Island Spice & Basil</strong></p>
+                            <p>123 Fusion Street</p>
+                            <p>Tribeca, New York, NY 10013</p>
+                            <a href="https://maps.google.com" target="_blank" class="contact-link">Get Directions →</a>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">📞</div>
+                            <h3>Phone</h3>
+                            <p><strong>Main Line:</strong></p>
+                            <p><a href="tel:2125558424">(212) 555-THAI</a></p>
+                            <p><a href="tel:2125558424">(212) 555-8424</a></p>
+                            <p class="small-text">Mon-Sat: 11AM - 10PM</p>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">✉️</div>
+                            <h3>Email</h3>
+                            <p><strong>General Inquiries:</strong></p>
+                            <p><a href="mailto:hello@islandspiceandbasil.com">hello@islandspiceandbasil.com</a></p>
+                            <p><strong>Reservations:</strong></p>
+                            <p><a href="mailto:reservations@islandspiceandbasil.com">reservations@islandspiceandbasil.com</a></p>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">🕐</div>
+                            <h3>Hours</h3>
+                            <p><strong>Dining Room:</strong></p>
+                            <p>Monday - Thursday: 5:00 PM - 10:00 PM</p>
+                            <p>Friday - Saturday: 5:00 PM - 11:00 PM</p>
+                            <p>Sunday: 4:00 PM - 9:00 PM</p>
+                            <p class="small-text">Kitchen closes 30 min before closing</p>
+                        </div>
+                    </div>
+
+                    <!-- Additional Contact Options -->
+                    <div class="contact-methods">
+                        <h3 class="subsection-title">Other Ways to Reach Us</h3>
+                        <div class="methods-grid">
+                            <div class="method-item">
+                                <span class="method-icon">🎉</span>
+                                <div>
+                                    <h4>Private Events & Catering</h4>
+                                    <p>Host your next event with us!</p>
+                                    <a href="mailto:events@islandspiceandbasil.com">events@islandspiceandbasil.com</a>
+                                </div>
+                            </div>
+                            <div class="method-item">
+                                <span class="method-icon">📰</span>
+                                <div>
+                                    <h4>Press & Media</h4>
+                                    <p>Media inquiries and press kits</p>
+                                    <a href="mailto:press@islandspiceandbasil.com">press@islandspiceandbasil.com</a>
+                                </div>
+                            </div>
+                            <div class="method-item">
+                                <span class="method-icon">💼</span>
+                                <div>
+                                    <h4>Careers</h4>
+                                    <p>Join our passionate team!</p>
+                                    <a href="mailto:careers@islandspiceandbasil.com">careers@islandspiceandbasil.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <div class="form-container">
+                        <h3 class="form-title">Send Us a Message</h3>
+                        <p class="form-subtitle">Whether you have questions, feedback, or want to make a reservation, we're here to help!</p>
+                        
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Your Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(212) 555-1234">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject...</option>
+                                    <option value="reservation">Reservation</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="private-event">Private Event</option>
+                                    <option value="catering">Catering</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Tell us what's on your mind..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary-large">Send Message</button>
+                            <p class="form-note">* Required fields. We typically respond within 24 hours.</p>
+                        </form>
+
+                        <div class="form-success" id="formSuccess" style="display: none;">
+                            <div class="success-icon">✓</div>
+                            <h4>Message Sent Successfully!</h4>
+                            <p>Thank you for reaching out. We'll get back to you soon.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Find Us in Tribeca</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle">Located in the heart of Manhattan's vibrant Tribeca neighborhood</p>
+        </div>
+        <div class="map-placeholder">
+            <div class="map-overlay">
+                <div class="map-info">
+                    <h3>🗺️ Island Spice & Basil</h3>
+                    <p>123 Fusion Street, Tribeca</p>
+                    <p>New York, NY 10013</p>
+                    <a href="https://maps.google.com" target="_blank" class="btn btn-secondary">Open in Google Maps</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="location-info">
+                <h3>Getting Here</h3>
+                <div class="transport-grid">
+                    <div class="transport-item">
+                        <span class="transport-icon">🚇</span>
+                        <div>
+                            <h4>Subway</h4>
+                            <p>1, 2, 3 trains to Chambers Street (5 min walk)</p>
+                            <p>A, C, E trains to Chambers Street (7 min walk)</p>
+                        </div>
+                    </div>
+                    <div class="transport-item">
+                        <span class="transport-icon">🚌</span>
+                        <div>
+                            <h4>Bus</h4>
+                            <p>M20 to Chambers Street</p>
+                            <p>M22 to West Broadway</p>
+                        </div>
+                    </div>
+                    <div class="transport-item">
+                        <span class="transport-icon">🅿️</span>
+                        <div>
+                            <h4>Parking</h4>
+                            <p>Icon Parking - 100 Reade Street (2 min walk)</p>
+                            <p>Street parking available after 6 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="title-underline"></div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Do I need a reservation?</h4>
+                    <p>We highly recommend reservations, especially for Friday and Saturday evenings. Walk-ins are welcome based on availability.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do you accommodate dietary restrictions?</h4>
+                    <p>Absolutely! We offer vegetarian, vegan, and gluten-free options. Please inform us of any allergies when making your reservation.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is there a dress code?</h4>
+                    <p>Casual elegant. We want you to feel comfortable while enjoying a special dining experience.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do you offer takeout and delivery?</h4>
+                    <p>Yes! Order through our website or via DoorDash and Uber Eats for delivery throughout NYC.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can you host private events?</h4>
+                    <p>Yes! We have a private dining room for up to 40 guests. Contact us at events@islandspiceandbasil.com for details.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do you have a bar/happy hour?</h4>
+                    <p>Yes! Our bar serves creative cocktails and has happy hour Monday-Thursday, 5-7 PM with $2 off all drinks and appetizers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Experience the Fusion?</h2>
+                <p>Visit us or order online for an unforgettable culinary journey</p>
+                <div class="cta-buttons">
+                    <a href="order.html" class="btn btn-primary-large">Order Online</a>
+                    <a href="menu.html" class="btn btn-secondary-large">View Menu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Island Spice & Basil</h4>
+                    <p>Caribbean Thai Fusion Cuisine</p>
+                    <p class="footer-tagline">"Where Two Cultures Dance on Your Palate"</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="order.html">Order Online</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Location</h4>
+                    <p>123 Fusion Street<br>New York, NY 10013</p>
+                    <p>Phone: (212) 555-THAI</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <p>Mon-Thu: 5PM - 10PM<br>
+                    Fri-Sat: 5PM - 11PM<br>
+                    Sunday: 4PM - 9PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Island Spice & Basil. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
