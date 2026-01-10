@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Island Spice & Basil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">Island Spice & Basil</a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html" class="active">Menu</a></li>
+                    <li><a href="order.html">Order Online</a></li>
+                    <li><a href="press.html">Press</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <h1 class="page-title">Our Menu</h1>
+            <p class="page-subtitle">A Culinary Journey Through Two Tropical Worlds</p>
+        </div>
+    </section>
+
+    <!-- Menu Navigation -->
+    <section class="menu-nav-section">
+        <div class="container">
+            <div class="menu-nav">
+                <button class="menu-nav-btn active" data-category="all">All</button>
+                <button class="menu-nav-btn" data-category="appetizers">Appetizers</button>
+                <button class="menu-nav-btn" data-category="soups">Soups & Salads</button>
+                <button class="menu-nav-btn" data-category="mains">Main Courses</button>
+                <button class="menu-nav-btn" data-category="seafood">Seafood</button>
+                <button class="menu-nav-btn" data-category="desserts">Desserts</button>
+                <button class="menu-nav-btn" data-category="beverages">Beverages</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Content -->
+    <section class="section section-light">
+        <div class="container">
+            <!-- Appetizers -->
+            <div class="menu-category" data-category="appetizers">
+                <h2 class="menu-category-title">🌶️ Appetizers & Small Plates</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Jerk Spring Rolls</h3>
+                            <span class="menu-item-price">$14</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Crispy spring rolls filled with jerk chicken, Thai basil, and mango. Served with 
+                            tamarind-scotch bonnet dipping sauce.
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="tag-spicy">Spicy 🌶️🌶️</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Callaloo Dumplings</h3>
+                            <span class="menu-item-price">$16</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Pan-seared dumplings stuffed with callaloo, Thai chili, and coconut cream. 
+                            Drizzled with lemongrass oil.
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="tag-veg">Vegetarian</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Coconut Shrimp Satay</h3>
+                            <span class="menu-item-price">$18</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Grilled shrimp marinated in coconut milk, curry powder, and Caribbean allspice. 
+                            Served with peanut-rum sauce.
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="tag-popular">Popular</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Plantain Pad See Ew Bites</h3>
+                            <span class="menu-item-price">$12</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Crispy plantain cups filled with pad see ew noodles, jerk-spiced vegetables, and Thai basil.
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="tag-vegan">Vegan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soups & Salads -->
+            <div class="menu-category" data-category="soups">
+                <h2 class="menu-category-title">🥗 Soups & Salads</h2>
+                <div class="menu-items">
+                    <div class="menu-item featured">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Jerk Tom Yum Soup</h3>
+                            <span class="menu-item-price">$16</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Our signature soup! Spicy-sour Thai tom yum broth infused with jerk spices, 
+                            shrimp, mushrooms, and scotch bonnet peppers.
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="tag-signature">Signature</span>
+                            <span class="tag-spicy">Very Spicy 🌶️🌶️🌶️</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Caribbean Tom Kha Gai</h3>
+                            <span class="menu-item-price">$14</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Coconut milk soup with chicken, galangal, lemongrass, and Caribbean peppers. 
+                            Creamy, aromatic, and comforting.
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Papaya Salad with Jerk Chicken</h3>
+                            <span class="menu-item-price">$15</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Green papaya salad (som tam) topped with grilled jerk chicken, peanuts, 
+                            cherry tomatoes, and lime dressing.
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="tag-gf">Gluten-Free</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Thai Basil Ackee Salad</h3>
+                            <span class="menu-item-price">$13</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Fresh mixed greens, ackee, Thai basil, mango, and cashews with tamarind vinaigrette.
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="tag-veg">Vegetarian</span>
+                            <span class="tag-gf">Gluten-Free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Courses -->
+            <div class="menu-category" data-category="mains">
+                <h2 class="menu-category-title">🍛 Main Courses</h2>
+                <div class="menu-items">
+                    <div class="menu-item featured">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Callaloo Green Curry</h3>
+                            <span class="menu-item-price">$24</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Thai green curry with Caribbean callaloo, coconut milk, Thai basil, and your choice 
+                            of chicken, shrimp, or tofu. Served with jasmine rice and plantain chips.
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="tag-signature">Signature</span>
+                            <span class="tag-popular">Popular</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item featured">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Thai Basil Oxtail</h3>
+                            <span class="menu-item-price">$32</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Slow-braised oxtail in Caribbean-style gravy elevated with Thai basil, lemongrass, 
+                            and galangal. Served over coconut rice with pickled vegetables.
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="tag-signature">Signature</span>
+                            <span class="tag-chefs">Chef's Kiss 💋</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item featured">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Massaman Curry Goat</h3>
+                            <span class="menu-item-price">$34</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Tender goat slow-cooked for 8 hours in massaman curry sauce with scotch bonnet 
+                            and allspice. Served with roti and jasmine rice.
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="tag-chefs">Chef's Kiss 💋</span>
+                            <span class="tag-spicy">Medium Spicy 🌶️🌶️</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Jerk Pad Thai</h3>
+                            <span class="menu-item-price">$22</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Classic pad thai noodles wok-tossed with jerk chicken, tamarind sauce, 
+                            peanuts, bean sprouts, and lime.
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Drunken Noodles with Caribbean Sausage</h3>
+                            <span class="menu-item-price">$20</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Pad kee mao with spicy Caribbean sausage, holy basil, bell peppers, and Thai chili.
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="tag-spicy">Very Spicy 🌶️🌶️🌶️</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Red Curry Roti Bowl</h3>
+                            <span class="menu-item-price">$19</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Crispy roti bowl filled with Thai red curry, chickpeas, sweet potato, and spinach. 
+                            Topped with coconut cream.
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="tag-vegan">Vegan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seafood -->
+            <div class="menu-category" data-category="seafood">
+                <h2 class="menu-category-title">🦞 Seafood Specialties</h2>
+                <div class="menu-items">
+                    <div class="menu-item featured">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Volcano Lobster Pad Thai</h3>
+                            <span class="menu-item-price">$48</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Our award-winning dish! Fresh Maine lobster tail with pad thai noodles, flambéed 
+                            with Caribbean rum, finished with tamarind-jerk glaze. Served with smoking volcano effect.
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="tag-signature">Signature</span>
+                            <span class="tag-chefs">Chef's Kiss 💋</span>
+                            <span class="tag-award">Award Winner 🏆</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item featured">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Jerk Tom Yum Prawns</h3>
+                            <span class="menu-item-price">$28</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Succulent prawns marinated in jerk spices, swimming in tangy tom yum broth 
+                            with scotch bonnet peppers.
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="tag-signature">Signature</span>
+                            <span class="tag-popular">Popular</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item featured">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Escovitch Sea Bass</h3>
+                            <span class="menu-item-price">$38</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Whole crispy sea bass topped with Thai-Caribbean escovitch sauce—pickled vegetables, 
+                            scotch bonnet, and bird's eye chili in tamarind reduction.
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="tag-chefs">Chef's Kiss 💋</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Panang Curry Mahi-Mahi</h3>
+                            <span class="menu-item-price">$26</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Grilled mahi-mahi in rich panang curry sauce with jerk seasonings, kaffir lime, 
+                            and Thai basil. Served with coconut rice.
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Salt Fish & Ackee Fried Rice</h3>
+                            <span class="menu-item-price">$24</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Thai-style fried rice with Caribbean salt fish, ackee, scallions, and egg. 
+                            A delicious fusion breakfast for dinner.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div class="menu-category" data-category="desserts">
+                <h2 class="menu-category-title">🍰 Desserts</h2>
+                <div class="menu-items">
+                    <div class="menu-item featured">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Mango Sticky Rice Roti</h3>
+                            <span class="menu-item-price">$14</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Crispy Caribbean roti filled with Thai sticky rice, fresh mango, and 
+                            sweetened coconut cream. A perfect bridge between two worlds.
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="tag-signature">Signature</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Coconut Crème Brûlée</h3>
+                            <span class="menu-item-price">$12</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Silky crème brûlée infused with coconut milk, pandan, and Caribbean rum. 
+                            Topped with caramelized palm sugar.
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Thai Basil Rum Cake</h3>
+                            <span class="menu-item-price">$10</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Traditional Caribbean rum cake with Thai basil-infused glaze. 
+                            Served warm with coconut ice cream.
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Fried Banana Spring Rolls</h3>
+                            <span class="menu-item-price">$11</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Caramelized bananas wrapped in spring rolls, fried crispy, and drizzled with 
+                            rum-caramel sauce. Served with vanilla ice cream.
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Tropical Sorbet Trio</h3>
+                            <span class="menu-item-price">$9</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Mango, coconut, and soursop sorbets garnished with fresh mint and lime zest.
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="tag-vegan">Vegan</span>
+                            <span class="tag-gf">Gluten-Free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beverages -->
+            <div class="menu-category" data-category="beverages">
+                <h2 class="menu-category-title">🍹 Beverages</h2>
+                
+                <h3 class="menu-subcategory-title">Signature Cocktails</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Bangkok Breeze</h3>
+                            <span class="menu-item-price">$14</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Thai basil-infused rum, pineapple, lime, and ginger beer. Refreshing and herbaceous.
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Jerk Margarita</h3>
+                            <span class="menu-item-price">$13</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Tequila with mango, lime, and a rim of jerk seasoning. Sweet, spicy, and addictive.
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Lemongrass Mojito</h3>
+                            <span class="menu-item-price">$12</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Caribbean white rum muddled with lemongrass, mint, lime, and coconut sugar.
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Scotch Bonnet Bloody Mary</h3>
+                            <span class="menu-item-price">$13</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Vodka with spicy tomato juice, scotch bonnet hot sauce, Thai fish sauce, and all the fixings.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 class="menu-subcategory-title">Non-Alcoholic</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Thai Iced Tea with Coconut</h3>
+                            <span class="menu-item-price">$6</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Creamy Thai tea with a splash of coconut milk and sweetened condensed milk.
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Sorrel-Hibiscus Cooler</h3>
+                            <span class="menu-item-price">$5</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Caribbean sorrel drink blended with Thai hibiscus tea, ginger, and lime.
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Fresh Coconut Water</h3>
+                            <span class="menu-item-price">$6</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Young coconut water served in the shell with lime wedge.
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Passion Fruit Lemonade</h3>
+                            <span class="menu-item-price">$5</span>
+                        </div>
+                        <p class="menu-item-description">
+                            House-made lemonade with fresh passion fruit and mint.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 class="menu-subcategory-title">Wine & Beer</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Red Stripe (Jamaica)</h3>
+                            <span class="menu-item-price">$7</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Singha (Thailand)</h3>
+                            <span class="menu-item-price">$7</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">House Wine (Red/White)</h3>
+                            <span class="menu-item-price">$10 / $45 bottle</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Prosecco</h3>
+                            <span class="menu-item-price">$12 / $50 bottle</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Notes -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="menu-notes">
+                <h3>Menu Notes</h3>
+                <ul>
+                    <li>🌶️ Spice levels can be adjusted to your preference—just ask your server!</li>
+                    <li>🌱 We offer gluten-free, vegetarian, and vegan options throughout our menu</li>
+                    <li>⚠️ Please inform us of any food allergies or dietary restrictions</li>
+                    <li>📝 Menu items and prices subject to change based on seasonal availability</li>
+                    <li>💡 Can't decide? Ask about our Chef's Tasting Menu ($85 per person)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Taste the Fusion?</h2>
+                <p>Order online or visit us for an unforgettable dining experience</p>
+                <div class="cta-buttons">
+                    <a href="order.html" class="btn btn-primary-large">Order for Delivery</a>
+                    <a href="contact.html" class="btn btn-secondary-large">Make a Reservation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Island Spice & Basil</h4>
+                    <p>Caribbean Thai Fusion Cuisine</p>
+                    <p class="footer-tagline">"Where Two Cultures Dance on Your Palate"</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="order.html">Order Online</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Location</h4>
+                    <p>123 Fusion Street<br>New York, NY 10013</p>
+                    <p>Phone: (212) 555-THAI</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <p>Mon-Thu: 5PM - 10PM<br>
+                    Fri-Sat: 5PM - 11PM<br>
+                    Sunday: 4PM - 9PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Island Spice & Basil. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

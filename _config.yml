@@ -1,0 +1,7 @@
+# GitHub Pages Configuration
+# This file configures the 404 page for GitHub Pages deployment
+
+# Use custom 404 page
+404: 404.html
+
+
