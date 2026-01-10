@@ -116,9 +116,14 @@ Update these in `index.html` (lines 8-33):
 ## Deployment Options
 
 ### GitHub Pages
-1. Create a GitHub repository
-2. Push your files
-3. Enable GitHub Pages in repository settings
+**📘 See `GITHUB_SETUP.md` for complete step-by-step instructions!**
+
+Quick steps:
+1. Install Git (if not already installed)
+2. Create a GitHub repository
+3. Push your files using Git commands
+4. Enable GitHub Pages in repository settings
+5. Your site will be live at: `https://YOUR_USERNAME.github.io/repository-name/`
 
 ### Netlify
 1. Drag and drop your folder to Netlify
