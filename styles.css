@@ -197,6 +197,10 @@
     --bg-dark: #111827;
     --border-color: #e5e7eb;
     
+    /* Featured Projects Purple - brand purple from logo/buttons */
+    --featured-project-purple: #6366f1;
+    --featured-project-purple-light: #818cf8;
+    
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
@@ -761,6 +765,27 @@ body {
 
 .featured-projects-section {
     background: var(--bg-color);
+}
+
+/* Featured Projects Purple Background - Scoped ONLY to Home page Featured Projects */
+.featured-projects-section .project-card {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(129, 140, 248, 0.15) 100%), var(--bg-color) !important;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.25s ease !important;
+}
+
+.featured-projects-section .project-card:hover {
+    transform: translateY(-12px);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.20) 0%, rgba(129, 140, 248, 0.20) 100%), var(--bg-color) !important;
+    box-shadow: 0 32px 60px rgba(15, 23, 42, 0.16), 0 0 40px rgba(99, 102, 241, 0.25) !important;
+}
+
+[data-theme="dark"] .featured-projects-section .project-card {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.18) 0%, rgba(129, 140, 248, 0.18) 100%), var(--bg-dark) !important;
+}
+
+[data-theme="dark"] .featured-projects-section .project-card:hover {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.25) 0%, rgba(129, 140, 248, 0.25) 100%), var(--bg-dark) !important;
+    box-shadow: 0 32px 60px rgba(2, 6, 23, 0.45), 0 0 50px rgba(99, 102, 241, 0.30) !important;
 }
 
 .projects-grid {
