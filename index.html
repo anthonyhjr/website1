@@ -633,5 +633,14 @@
             renderServices('home-services-grid', true);
         });
     </script>
+
+    <!-- AI Concierge Widget -->
+    <script>
+        // Configure widget
+        window.CONCIERGE_API_URL = 'http://localhost:3001/api'; // Change to your production API URL when deploying
+        window.CONCIERGE_BUTTON_COLOR = '#6366f1'; // Your brand purple color
+        window.CONCIERGE_POSITION = 'bottom-right';
+    </script>
+    <script src="ai-concierge/widget/concierge-widget.js"></script>
 </body>
 </html>
