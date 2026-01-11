@@ -2935,11 +2935,6 @@ img[loading="lazy"].loaded {
     }
 }
 
-.btn {
-    width: 100%;
-    justify-content: center;
-}
-
 /*.projects-grid {
     grid-template-columns: repeat(2, 1fr);
 }*/
