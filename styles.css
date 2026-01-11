@@ -949,8 +949,10 @@ body {
 
 .project-description {
     color: var(--text-light);
+    font-size: 1rem;
     line-height: 1.7;
     margin: 0;
+    max-width: 42ch;
 }
 
 .project-tags {
@@ -2672,6 +2674,7 @@ body {
     font-size: 1.2rem;
     transition: var(--transition);
     border: 2px solid var(--border-color);
+    text-decoration: none;
 }
 
 .share-btn:hover {
@@ -2682,12 +2685,8 @@ body {
     border-color: transparent;
 }
 
-.share-btn[data-platform="facebook"]:hover {
-    background: #1877f2;
-}
-
-.share-btn[data-platform="twitter"]:hover {
-    background: #1da1f2;
+.share-btn[data-platform="instagram"]:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 
 .share-btn[data-platform="linkedin"]:hover {

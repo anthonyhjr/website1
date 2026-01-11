@@ -534,9 +534,6 @@ document.addEventListener('DOMContentLoaded', function() {
             let shareUrl = '';
             
             switch(platform) {
-                case 'facebook':
-                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`;
-                    break;
                 case 'twitter':
                     shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(currentTitle)}`;
                     break;
