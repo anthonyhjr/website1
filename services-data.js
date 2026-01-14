@@ -12,7 +12,27 @@ const servicesData = [
             'Mobile-First Approach'
         ],
         price: 'Starting at $1,500',
-        featured: true
+        featured: true,
+        tiers: [
+            {
+                name: 'Basic',
+                priceLabel: 'From $1,500',
+                includes: ['Up to 5 pages', 'Basic contact form', 'Mobile responsive'],
+                recommended: false
+            },
+            {
+                name: 'Standard',
+                priceLabel: 'From $2,500',
+                includes: ['Up to 10 pages', 'Advanced forms', 'SEO optimization'],
+                recommended: true
+            },
+            {
+                name: 'Premium',
+                priceLabel: 'From $4,000',
+                includes: ['Unlimited pages', 'Custom features', 'Performance optimization'],
+                recommended: false
+            }
+        ]
     },
     {
         id: 'web-applications',
@@ -40,7 +60,27 @@ const servicesData = [
             'Content Migration'
         ],
         price: 'Starting at $2,000',
-        featured: true
+        featured: true,
+        tiers: [
+            {
+                name: 'Basic',
+                priceLabel: 'From $2,000',
+                includes: ['Visual refresh', 'Mobile optimization', 'Basic improvements'],
+                recommended: false
+            },
+            {
+                name: 'Standard',
+                priceLabel: 'From $3,500',
+                includes: ['Complete redesign', 'UX improvements', 'Performance boost'],
+                recommended: true
+            },
+            {
+                name: 'Premium',
+                priceLabel: 'From $5,500',
+                includes: ['Full rebuild', 'Advanced features', 'Ongoing support'],
+                recommended: false
+            }
+        ]
     },
     {
         id: 'ecommerce-solutions',
@@ -54,7 +94,27 @@ const servicesData = [
             'Order Tracking'
         ],
         price: 'Starting at $4,000',
-        featured: true
+        featured: true,
+        tiers: [
+            {
+                name: 'Basic',
+                priceLabel: 'From $4,000',
+                includes: ['Up to 50 products', 'Basic payment gateway', 'Order management'],
+                recommended: false
+            },
+            {
+                name: 'Standard',
+                priceLabel: 'From $6,500',
+                includes: ['Up to 200 products', 'Multiple payment options', 'Inventory tracking'],
+                recommended: true
+            },
+            {
+                name: 'Premium',
+                priceLabel: 'From $10,000',
+                includes: ['Unlimited products', 'Advanced analytics', 'Custom integrations'],
+                recommended: false
+            }
+        ]
     },
     {
         id: 'maintenance-support',

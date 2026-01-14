@@ -94,9 +94,9 @@
     <script src="services-renderer.js"></script>
     <script src="script.js"></script>
     <script>
-        // Render all services on services page
+        // Render all services on services page (with tiers if available)
         document.addEventListener('DOMContentLoaded', function() {
-            renderServices('all-services-grid', false);
+            renderServices('all-services-grid', false, true);
         });
     </script>
 </body>
