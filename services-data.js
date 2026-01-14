@@ -141,7 +141,7 @@ const servicesData = [
             'PDF & Digital-Ready Formatting',
             'Optimized for Downloads & Lead Magnets'
         ],
-        price: 'Starting at $1,200',
+        price: 'Starting at $700',
         featured: false
     },
     {
@@ -169,7 +169,7 @@ const servicesData = [
             'Delivery System (download link / gated access)',
             'Email Capture + Lead Magnet Option'
         ],
-        price: 'Starting at $1,500',
+        price: 'Starting at $1,200',
         featured: false
     },
     {
