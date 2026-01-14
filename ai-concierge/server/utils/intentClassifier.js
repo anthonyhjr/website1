@@ -20,10 +20,12 @@ function classifyIntent(userMessage, previousMessages = []) {
     return 'human_escalation';
   }
   
-  // Pricing intent keywords
+  // Pricing intent keywords (enhanced)
   const pricingKeywords = [
     'price', 'cost', 'pricing', 'quote', 'rates', 'how much', 'payment',
-    'fee', 'charge', 'budget', 'afford', 'expensive', 'cheap', 'package'
+    'fee', 'charge', 'budget', 'afford', 'expensive', 'cheap', 'package',
+    'starting at', 'from', 'pricing for', 'cost of', 'price for', 'how much does',
+    'what does', 'what is the price', 'what is the cost', 'pricing information'
   ];
   
   if (pricingKeywords.some(keyword => lowerMessage.includes(keyword))) {

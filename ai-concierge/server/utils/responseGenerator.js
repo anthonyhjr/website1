@@ -78,7 +78,19 @@ function generateResponse(userMessage, complianceResult, config) {
   // Check if answer exists on current page
   const existsOnPage = pageContext && answerExistsOnPage(pageContext, relevantContent);
   
-  if (existsOnPage && topResult.url) {
+  // Handle "what services do you offer" queries - list services without pricing
+  const isServiceListQuery = userMessage.toLowerCase().match(/\b(what services|services do you|offer|offerings|what do you)\b/);
+  if (isServiceListQuery && intent === 'information') {
+    const serviceResults = relevantContent.filter(r => r.type === 'service').slice(0, 6);
+    if (serviceResults.length > 0) {
+      answer = "I offer the following services: ";
+      const serviceNames = serviceResults.map(s => s.title).join(', ');
+      answer += serviceNames + ". ";
+      answer += "Would you like to know more about any specific service or see pricing?";
+    } else {
+      answer = "I offer a range of web development and design services. Visit the Services page to see all offerings with details.";
+    }
+  } else if (existsOnPage && topResult.url) {
     // Reference current page instead of repeating
     answer = "That information is available on this page. ";
     if (pageContext.section) {
@@ -87,7 +99,7 @@ function generateResponse(userMessage, complianceResult, config) {
     answer += "I can also provide more details if needed.";
   } else {
     // Generate response based on content type and intent
-    answer = buildAnswerFromContent(topResult, relevantContent, intent, intentBehavior, confidence, config);
+    answer = buildAnswerFromContent(topResult, relevantContent, intent, intentBehavior, confidence, config, userMessage);
   }
 
   // Add relevant links
@@ -110,6 +122,11 @@ function generateResponse(userMessage, complianceResult, config) {
   // Apply voice guardrails (remove hype, ensure professional tone)
   answer = applyVoiceGuardrails(answer);
 
+  // Validate pricing (prevent outdated prices)
+  if (complianceResult.servicesData) {
+    answer = validatePricingInResponse(answer, complianceResult.servicesData);
+  }
+
   // Enforce completion guarantee (never cut off mid-sentence)
   answer = ensureCompleteResponse(answer, intentBehavior.responseLength);
 
@@ -125,7 +142,7 @@ function generateResponse(userMessage, complianceResult, config) {
 /**
  * Build answer from retrieved content
  */
-function buildAnswerFromContent(topResult, relevantContent, intent, intentBehavior, confidence, config) {
+function buildAnswerFromContent(topResult, relevantContent, intent, intentBehavior, confidence, config, userMessage) {
   let answer = '';
 
   // Add confidence transparency if needed
@@ -140,11 +157,16 @@ function buildAnswerFromContent(topResult, relevantContent, intent, intentBehavi
   // Service information
   else if (topResult.type === 'service') {
     if (intent === 'pricing_intent' && intentBehavior.allowPricing) {
-      // Include pricing if allowed
-      answer += `Based on your question about ${topResult.title}: ${topResult.text}`;
+      // Include pricing ONLY when explicitly asked
+      const priceInfo = topResult.priceLabel ? ` ${topResult.priceLabel}.` : '';
+      answer += `${topResult.title}${priceInfo} ${topResult.text || topResult.description || ''}`;
+    } else if (intentBehavior.allowPricing && hasStrongBuyingIntent(userMessage)) {
+      // Strong buying intent - include pricing
+      const priceInfo = topResult.priceLabel ? ` ${topResult.priceLabel}.` : '';
+      answer += `${topResult.title}${priceInfo} ${topResult.text || topResult.description || ''}`;
     } else {
-      // Just summary for now (progressive disclosure)
-      answer += `${topResult.text}`;
+      // Just summary for now (progressive disclosure) - no pricing unless asked
+      answer += `${topResult.text || topResult.description || topResult.title}`;
     }
   }
   // Navigation intent - be very concise
@@ -215,9 +237,14 @@ function determineNextStep(userMessage, relevantContent, config, intent, intentB
     return "Click the link below to go there.";
   }
 
-  // Pricing intent - always suggest contact for accurate pricing
+  // Pricing intent - provide pricing if available, then suggest contact for quotes
   if (intent === 'pricing_intent') {
-    return "For specific pricing information, I recommend reaching out to our team directly.";
+    const topResult = relevantContent[0];
+    if (topResult && topResult.type === 'service' && topResult.priceLabel) {
+      // Pricing was already included in the answer, suggest next step
+      return "For a detailed quote based on your specific needs, I recommend reaching out through our contact form.";
+    }
+    return "I can share starting prices for our services. For a detailed quote based on your specific needs, I recommend reaching out through our contact form.";
   }
 
   // Human escalation
@@ -310,9 +337,63 @@ function ensureCompleteResponse(text, responseLength) {
 }
 
 /**
+ * Check if user message shows strong buying intent
+ */
+function hasStrongBuyingIntent(userMessage) {
+  const buyingKeywords = [
+    'hire', 'book', 'start project', 'sign up', 'consultation', 'get started',
+    'begin', 'ready to', 'want to work', 'interested in hiring'
+  ];
+  const lowerMessage = userMessage.toLowerCase();
+  return buyingKeywords.some(keyword => lowerMessage.includes(keyword));
+}
+
+/**
+ * Validate pricing in response (prevent outdated prices)
+ */
+function validatePricingInResponse(responseText, servicesData) {
+  // Extract all $ amounts from response
+  const priceMatches = responseText.match(/\$[\d,]+/g);
+  if (!priceMatches) {
+    return responseText; // No prices mentioned
+  }
+  
+  // Get all valid prices from services data
+  const validPrices = new Set();
+  servicesData.forEach(service => {
+    if (service.priceLabel) {
+      // Extract numeric values from price labels
+      const priceMatch = service.priceLabel.match(/\$[\d,]+/g);
+      if (priceMatch) {
+        priceMatch.forEach(p => validPrices.add(p));
+      }
+    }
+  });
+  
+  // Check if any mentioned price is not in valid prices
+  for (const mentionedPrice of priceMatches) {
+    if (!validPrices.has(mentionedPrice)) {
+      // Invalid price detected - replace with safe message
+      console.warn(`Invalid price detected in response: ${mentionedPrice}`);
+      return responseText.replace(
+        new RegExp(`[^\\$]*${mentionedPrice.replace('$', '\\$')}[^\\$]*`, 'g'),
+        'Pricing is scope-based—see current starting prices on the Services page.'
+      );
+    }
+  }
+  
+  return responseText;
+}
+
+/**
  * Format response with assistant name if needed (for consistency)
  */
 function formatResponse(text, assistantName, complianceResult) {
+  // Validate pricing before returning
+  if (complianceResult.servicesData) {
+    text = validatePricingInResponse(text, complianceResult.servicesData);
+  }
+  
   // Don't add name prefix - keep responses natural
   // Name is used in system context, not in every response
   return text;

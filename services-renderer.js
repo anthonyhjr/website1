@@ -57,8 +57,14 @@ function renderServices(containerId, showFeaturedOnly = false, showTiers = false
 
         // Build CTA section
         const ctaHref = `contact.html?service=${encodeURIComponent(service.id)}`;
+        
+        // Show starting price above CTA for specific services with tiers
+        const showPriceAboveCTA = ['website-development', 'website-redesign', 'ecommerce-solutions'].includes(service.id);
+        const priceAboveCTA = showPriceAboveCTA ? `<div class="service-starting-price">${service.price}</div>` : '';
+        
         const ctaHtml = `
             <div class="service-cta-section">
+                ${priceAboveCTA}
                 <a href="${ctaHref}" class="btn btn-primary service-cta-btn">Request Quote</a>
             </div>
         `;

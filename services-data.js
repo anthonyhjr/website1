@@ -11,24 +11,24 @@ const servicesData = [
             'Fast Loading Times',
             'Mobile-First Approach'
         ],
-        price: 'Starting at $1,500',
+        price: 'Starting at $600',
         featured: true,
         tiers: [
             {
                 name: 'Basic',
-                priceLabel: 'From $1,500',
+                priceLabel: 'From $600',
                 includes: ['Up to 5 pages', 'Basic contact form', 'Mobile responsive'],
                 recommended: false
             },
             {
                 name: 'Standard',
-                priceLabel: 'From $2,500',
+                priceLabel: 'From $1,200',
                 includes: ['Up to 10 pages', 'Advanced forms', 'SEO optimization'],
                 recommended: true
             },
             {
                 name: 'Premium',
-                priceLabel: 'From $4,000',
+                priceLabel: 'From $2,000',
                 includes: ['Unlimited pages', 'Custom features', 'Performance optimization'],
                 recommended: false
             }
@@ -36,16 +36,16 @@ const servicesData = [
     },
     {
         id: 'web-applications',
-        title: 'Web Applications',
+        title: 'Mobile Application',
         icon: 'fas fa-mobile-alt',
-        description: 'Custom web applications with advanced functionality. From dashboards to e-commerce platforms.',
+        description: 'Premium mobile app development for iOS and Android—designed for performance, clean UX, and a polished launch-ready experience.',
         features: [
-            'Custom Functionality',
-            'User Authentication',
-            'Database Integration',
-            'API Development'
+            'iOS + Android Ready (Cross-Platform)',
+            'Modern UI/UX & Smooth Navigation',
+            'API / Data Integration (as needed)',
+            'App Store–Ready Build Guidance'
         ],
-        price: 'Starting at $3,000',
+        price: 'Starting at $2,000',
         featured: false
     },
     {
@@ -59,24 +59,24 @@ const servicesData = [
             'Better Performance',
             'Content Migration'
         ],
-        price: 'Starting at $2,000',
+        price: 'Starting at $1,000',
         featured: true,
         tiers: [
             {
                 name: 'Basic',
-                priceLabel: 'From $2,000',
+                priceLabel: 'From $1,000',
                 includes: ['Visual refresh', 'Mobile optimization', 'Basic improvements'],
                 recommended: false
             },
             {
                 name: 'Standard',
-                priceLabel: 'From $3,500',
+                priceLabel: 'From $1,800',
                 includes: ['Complete redesign', 'UX improvements', 'Performance boost'],
                 recommended: true
             },
             {
                 name: 'Premium',
-                priceLabel: 'From $5,500',
+                priceLabel: 'From $2,800',
                 includes: ['Full rebuild', 'Advanced features', 'Ongoing support'],
                 recommended: false
             }
@@ -93,24 +93,24 @@ const servicesData = [
             'Product Management',
             'Order Tracking'
         ],
-        price: 'Starting at $4,000',
+        price: 'Starting at $1,500',
         featured: true,
         tiers: [
             {
                 name: 'Basic',
-                priceLabel: 'From $4,000',
+                priceLabel: 'From $1,500',
                 includes: ['Up to 50 products', 'Basic payment gateway', 'Order management'],
                 recommended: false
             },
             {
                 name: 'Standard',
-                priceLabel: 'From $6,500',
+                priceLabel: 'From $2,500',
                 includes: ['Up to 200 products', 'Multiple payment options', 'Inventory tracking'],
                 recommended: true
             },
             {
                 name: 'Premium',
-                priceLabel: 'From $10,000',
+                priceLabel: 'From $4,000',
                 includes: ['Unlimited products', 'Advanced analytics', 'Custom integrations'],
                 recommended: false
             }
@@ -183,7 +183,21 @@ const servicesData = [
             'Custom Knowledge Base / Content Training',
             'Embedded Website Chat UI'
         ],
-        price: 'Starting at $2,500',
+        price: 'Starting at $800',
+        featured: false
+    },
+    {
+        id: 'logo-design',
+        title: 'Logo Design',
+        icon: 'fas fa-palette',
+        description: 'Professional logo design tailored to your brand—delivered with clean, scalable files and a polished look ready for web, print, and social media.',
+        features: [
+            'Custom Logo Concepts',
+            'Brand-Ready Color & Typography',
+            'High-Res + Vector File Delivery',
+            'Social Media & Web-Optimized Exports'
+        ],
+        price: 'Starting at $200',
         featured: false
     }
 ];

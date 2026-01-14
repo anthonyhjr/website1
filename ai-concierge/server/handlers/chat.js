@@ -7,6 +7,7 @@ const { applyComplianceFilter } = require('../utils/compliance');
 const { generateResponse } = require('../utils/responseGenerator');
 const { classifyIntent, getIntentBehavior } = require('../utils/intentClassifier');
 const { extractPageContext, prioritizeByPageContext } = require('../utils/pageContext');
+const { loadServicesData } = require('../data/services-data');
 const config = require('../../config/config');
 
 async function chatHandler(req, res) {
@@ -34,26 +35,30 @@ async function chatHandler(req, res) {
       pageContext.currentUrl = pageUrl;
     }
 
-    // Step 3: Retrieve relevant content from knowledge base
+    // Step 3: Load fresh services data from shared source (single source of truth)
+    // This ensures pricing and service info is always up-to-date
+    const servicesData = loadServicesData();
+    
+    // Step 4: Retrieve relevant content from knowledge base
     let relevantContent = retrieveRelevantContent(
       userMessage,
       {
         faqs: config.faqs || [],
-        services: config.services || [],
+        services: servicesData, // Use dynamically loaded services with pricing
         policies: config.policies || [],
         navLinks: config.navLinks || []
       }
     );
 
-    // Step 4: Prioritize content based on page context
+    // Step 5: Prioritize content based on page context
     if (pageContext) {
       relevantContent = prioritizeByPageContext(relevantContent, pageContext);
     }
 
-    // Step 5: Calculate confidence score
+    // Step 6: Calculate confidence score
     const confidence = calculateConfidence(relevantContent, userMessage);
 
-    // Step 6: Apply compliance filter (checks for blocked content, sensitive info, etc.)
+    // Step 7: Apply compliance filter (checks for blocked content, sensitive info, etc.)
     const complianceResult = applyComplianceFilter(userMessage, relevantContent, config);
     
     // Add metadata to compliance result
@@ -62,15 +67,16 @@ async function chatHandler(req, res) {
     complianceResult.intentBehavior = intentBehavior;
     complianceResult.confidence = confidence;
     complianceResult.pageContext = pageContext;
+    complianceResult.servicesData = servicesData; // Pass services data for pricing validation
 
-    // Step 7: Generate response with grounding context
+    // Step 8: Generate response with grounding context
     const response = generateResponse(
       userMessage,
       complianceResult,
       config
     );
 
-    // Step 8: Determine if lead capture should be prompted
+    // Step 9: Determine if lead capture should be prompted
     const shouldPromptLead = shouldPromptForLead(userMessage, complianceResult, intentBehavior);
 
     res.json({

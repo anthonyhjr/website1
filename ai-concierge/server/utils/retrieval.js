@@ -77,13 +77,13 @@ function retrieveRelevantContent(userMessage, knowledgeBase) {
     }
   }
 
-  // Search Services
+  // Search Services (with pricing information)
   if (knowledgeBase.services && knowledgeBase.services.length > 0) {
     for (const service of knowledgeBase.services) {
       const score = calculateRelevanceScore(
         userMessage,
         {
-          text: `${service.name} ${service.summary || ''}`,
+          text: `${service.name} ${service.summary || ''} ${service.description || ''} ${service.priceLabel || ''}`,
           keywords: service.keywords || []
         },
         keywords
@@ -94,9 +94,12 @@ function retrieveRelevantContent(userMessage, knowledgeBase) {
           type: 'service',
           content: service,
           score: score,
-          text: service.summary || service.name,
+          text: service.summary || service.description || service.name,
           url: service.url || null,
-          title: service.name
+          title: service.name,
+          priceLabel: service.priceLabel || null, // Include pricing for pricing intent
+          description: service.description || service.summary || null,
+          features: service.features || []
         });
       }
     }

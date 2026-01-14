@@ -758,6 +758,63 @@ body {
     font-weight: 500;
 }
 
+/* Project Filters */
+.project-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    padding: 1rem 0;
+}
+
+.project-filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--bg-light);
+    border: 2px solid var(--border-color);
+    border-radius: 50px;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-filter-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+.project-filter-btn.active {
+    background: var(--gradient-primary);
+    border-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
+}
+
+.project-filter-btn i {
+    font-size: 0.9rem;
+}
+
+.project-filter-btn:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.no-projects-message {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
 /* Projects Section */
 .projects-section {
     background: var(--bg-light);
@@ -1073,6 +1130,20 @@ body {
     .games-grid {
         grid-template-columns: 1fr;
     }
+
+    .project-filters {
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .project-filter-btn {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.875rem;
+    }
+
+    .project-filter-btn i {
+        font-size: 0.8rem;
+    }
 }
 
 /* Individual gradient backgrounds for each project card */
@@ -1094,6 +1165,11 @@ body {
 .gradient-commerce .project-media {
     /* E-Commerce Website: Red, Blue, Yellow, and Green */
     background: linear-gradient(135deg, #dc2626 0%, #3b82f6 30%, #fbbf24 60%, #22c55e 100%);
+}
+
+.gradient-converter .project-media {
+    /* Swift Converter: Blue, Cyan, and Teal */
+    background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 30%, #14b8a6 60%, #10b981 100%);
 }
 
 /* Games cards keep purple gradient */
@@ -2448,6 +2524,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 0.75rem;
+}
+
+.service-starting-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 0.25rem;
 }
 
 .service-cta-btn {
