@@ -453,26 +453,65 @@ document.addEventListener('DOMContentLoaded', function() {
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const email = document.getElementById('newsletterEmail').value;
             
-            // Here you would integrate with your email service (Mailchimp, ConvertKit, etc.)
-            // For now, we'll show a success message
-            newsletterMessage.textContent = 'Thank you for subscribing! Check your email to confirm.';
-            newsletterMessage.className = 'newsletter-message success';
-            newsletterForm.reset();
+            const submitBtn = newsletterForm.querySelector('button[type="submit"]');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoader = submitBtn.querySelector('.btn-loader');
+            const arrowIcon = submitBtn.querySelector('.fa-arrow-right');
             
-            // Track newsletter signup in analytics if available
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'newsletter_signup', {
-                    'event_category': 'engagement',
-                    'event_label': 'Newsletter Subscription'
+            // Show loading state
+            if (btnText) btnText.style.display = 'none';
+            if (btnLoader) btnLoader.style.display = 'inline-block';
+            if (arrowIcon) arrowIcon.style.display = 'none';
+            submitBtn.disabled = true;
+            
+            const formData = new FormData(newsletterForm);
+            formData.append('from_name', 'Newsletter Subscriber');
+            formData.append('message', 'New newsletter subscription from: ' + document.getElementById('newsletterEmail').value);
+            
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
                 });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    newsletterMessage.textContent = 'Thank you for subscribing! You\'ll receive updates and insights soon.';
+                    newsletterMessage.className = 'newsletter-message success';
+                    newsletterMessage.style.display = 'block';
+                    newsletterForm.reset();
+                    
+                    // Track newsletter signup in analytics if available
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'newsletter_signup', {
+                            'event_category': 'engagement',
+                            'event_label': 'Newsletter Subscription'
+                        });
+                    }
+                } else {
+                    throw new Error('Newsletter subscription failed');
+                }
+            } catch (error) {
+                console.error('Newsletter subscription error:', error);
+                newsletterMessage.textContent = 'Failed to subscribe. Please try again or contact me directly.';
+                newsletterMessage.className = 'newsletter-message error';
+                newsletterMessage.style.display = 'block';
+            } finally {
+                // Reset button state
+                if (btnText) btnText.style.display = 'inline';
+                if (btnLoader) btnLoader.style.display = 'none';
+                if (arrowIcon) arrowIcon.style.display = 'inline';
+                submitBtn.disabled = false;
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    if (newsletterMessage) {
+                        newsletterMessage.style.display = 'none';
+                    }
+                }, 5000);
             }
-            
-            // Hide message after 5 seconds
-            setTimeout(() => {
-                newsletterMessage.style.display = 'none';
-            }, 5000);
         });
     }
 
@@ -636,13 +675,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (data.success) {
                     formMessage.className = 'form-message success';
                     formMessage.textContent = 'Message sent successfully! I\'ll get back to you soon.';
+                    formMessage.style.display = 'block';
                     contactForm.reset();
+                    
+                    // Reset service dropdown after form reset
+                    setTimeout(() => {
+                        if (typeof populateServiceDropdown === 'function') {
+                            populateServiceDropdown();
+                        }
+                    }, 100);
                 } else {
                     throw new Error('Form submission failed');
                 }
             } catch (error) {
+                console.error('Form submission error:', error);
                 formMessage.className = 'form-message error';
-                formMessage.textContent = 'Failed to send message. Please try again or email me directly.';
+                formMessage.textContent = 'Failed to send message. Please try again or email me directly at ahartwelljr1690@gmail.com';
+                formMessage.style.display = 'block';
             } finally {
                 btnText.style.display = 'inline';
                 btnLoader.style.display = 'none';

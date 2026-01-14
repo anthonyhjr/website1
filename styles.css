@@ -1906,6 +1906,21 @@ body {
     border-color: var(--primary-color);
 }
 
+/* Scroll animation for testimonials */
+@media (prefers-reduced-motion: no-preference) {
+    .testimonial-card {
+        will-change: opacity, transform;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .testimonial-card {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
 .testimonial-quote {
     font-size: 3rem;
     color: var(--primary-color);
@@ -1946,9 +1961,68 @@ body {
     color: var(--text-color);
 }
 
+.author-name-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.author-name-wrapper h4 {
+    margin-bottom: 0;
+}
+
+.verified-badge {
+    display: inline-flex;
+    align-items: center;
+    color: #10b981;
+    font-size: 0.875rem;
+    margin-left: 0.25rem;
+}
+
+.verified-badge i {
+    font-size: 1rem;
+}
+
+.company-logo {
+    height: 40px;
+    width: auto;
+    max-width: 180px;
+    object-fit: contain;
+    margin-left: 0.75rem;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+    vertical-align: middle;
+    /* Ensure crisp rendering - prevent blur */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    /* Fallback for modern browsers */
+    image-rendering: auto;
+    /* Ensure transparency is preserved */
+    background: transparent;
+    /* Prevent scaling artifacts */
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.company-logo:hover {
+    opacity: 1;
+}
+
+/* Ensure logo is sharp at all sizes */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .company-logo {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
 .author-info p {
     color: var(--text-light);
     font-size: 0.9rem;
+    margin-bottom: 0.25rem;
 }
 
 .testimonial-rating {

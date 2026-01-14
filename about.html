@@ -51,12 +51,7 @@
             <div class="nav-wrapper">
                 <a href="index.html" class="logo">HartWebDev</a>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="projects.html" class="nav-link">Projects</a></li>
-                    <li><a href="skills.html" class="nav-link">Skills</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="about.html" class="nav-link active">About</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <!-- Navigation links will be rendered by nav-links.js -->
                 </ul>
                 <div class="nav-right">
                     <span class="availability-badge" id="availabilityBadge">
@@ -125,116 +120,8 @@
                 <div class="title-underline"></div>
                 <p class="section-subtitle">Testimonials from clients and colleagues</p>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">
-                        <i class="fas fa-quote-left"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "Exceptional work! Delivered a stunning website that exceeded all our expectations. 
-                        Professional, creative, and always responsive to feedback."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">JD</div>
-                        <div class="author-info">
-                            <h4>John Doe</h4>
-                            <p>CEO, Tech Company</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">
-                        <i class="fas fa-quote-left"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "Outstanding developer with incredible attention to detail. The website not only 
-                        looks amazing but performs flawlessly. Highly recommended!"
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SJ</div>
-                        <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>Creative Director, Design Studio</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">
-                        <i class="fas fa-quote-left"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "Working with [Your Name] was a pleasure. They transformed our vision into a 
-                        beautiful reality. The code quality is excellent and the design is stunning."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MW</div>
-                        <div class="author-info">
-                            <h4>Mike Williams</h4>
-                            <p>Founder, Startup Inc.</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section class="section achievements-section" style="padding-top: 0;">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Achievements & Certifications</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Award Winner</h3>
-                    <p>Best Web Developer 2024</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Google Certified</h3>
-                    <p>Web Development Professional</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-medal"></i>
-                    </div>
-                    <h3>Top Rated</h3>
-                    <p>5-Star Rating on All Platforms</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Open Source</h3>
-                    <p>Contributor to 50+ Projects</p>
-                </div>
+            <div class="testimonials-grid" id="testimonials-grid">
+                <!-- Testimonials will be rendered by testimonials-renderer.js -->
             </div>
         </div>
     </section>
@@ -243,13 +130,9 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; <span id="currentYear"></span> Your Name. All rights reserved.</p>
+                <p>&copy; <span id="currentYear"></span> HartWebDev. All rights reserved.</p>
                 <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="skills.html">Skills</a>
-                    <a href="contact.html">Contact</a>
+                    <!-- Navigation links will be rendered by nav-links.js -->
                 </div>
             </div>
         </div>
@@ -270,7 +153,10 @@
     </div>
 
     <!-- Scripts -->
+    <script src="nav-links.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="testimonials-data.js"></script>
+    <script src="testimonials-renderer.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
